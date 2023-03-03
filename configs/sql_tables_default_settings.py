@@ -37,6 +37,7 @@ def tokens_table_create():
                                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                                 UserId INTEGER,
                                 Token TINYTEXT UNIQUE,
+                                TokenTime INTEGER,
                                 FOREIGN KEY (UserId) REFERENCES Auth (Id));'''
     cursor = sqlite_connection.cursor()
     cursor.execute(sqlite_create_table_query)
